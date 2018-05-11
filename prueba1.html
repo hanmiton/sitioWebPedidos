@@ -1,0 +1,18 @@
+<html> 
+<head> 
+<title>Popup Inicializador de formularios</title> <script> 
+function llamadaOtraVentana(){ 
+//llamada a la función de ventana abridora 
+window.opener.inicializaCampos()
+window.opener.focus() 
+} 
+</script> 
+</head> 
+
+<body> 
+<form> 
+<input type="button" value="Llamar a función de otra ventana" 
+onclick="llamadaOtraVentana()"> 
+</form> 
+</body> 
+</html>

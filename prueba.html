@@ -1,0 +1,68 @@
+<html> 
+<head> 
+<title>Inicializador de formularios</title> 
+
+<link href="css/ui-darkness/jquery-ui-1.9.2.custom.css" rel="stylesheet" media="screen" >
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<style type="text/css">
+body {
+font-size:9px;
+}
+
+.wraper{
+margin:auto;
+width:400px;
+height:auto;
+border:1px solid #000;
+}
+.informacion{
+text-align:center;
+}
+</style>
+<script type="text/javascript">
+
+$(document).ready(function()
+{
+
+		$('#dialogo').button();
+		
+		
+		
+		$('#dialogonormal').dialog({
+		
+		autoOpen:false,
+		modal:true,
+		width:350,
+		height:300,
+		buttons: {
+		
+		jquery: function() {window.location.href="index.php";},
+		cerar: function() {$(this).dialog("close");},
+		}
+		
+		});
+		
+		
+		$('#dialogo').click(function(){
+		
+		$('#dialogonormal').dialog("open");
+		});
+});
+</script>
+</head> 
+
+<body> 
+<div id="dialogonormal" style="display:none">dialogo normal
+<p> ventana creada </p>
+
+
+
+</div>
+<div class="weaper">
+<div class="informacion">
+<h3> Creando ventana de dialogo </h3>
+<h3> HTM quiery query ui </h3>
+<div id="dialogo">dialogo</div>
+<p> boton l diagolo </p>
+</html>
